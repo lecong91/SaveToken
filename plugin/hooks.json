@@ -1,0 +1,50 @@
+{
+  "tokeneconomizer": {
+    "enabled": true,
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "python3 scripts/antigravity_hook.py --event SessionStart || python scripts/antigravity_hook.py --event SessionStart || py -3 scripts/antigravity_hook.py --event SessionStart",
+        "timeout": 15
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python3 scripts/antigravity_hook.py --event PreInvocation || python scripts/antigravity_hook.py --event PreInvocation || py -3 scripts/antigravity_hook.py --event PreInvocation",
+        "timeout": 15
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/antigravity_hook.py --event PreToolUse || python scripts/antigravity_hook.py --event PreToolUse || py -3 scripts/antigravity_hook.py --event PreToolUse",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/antigravity_hook.py --event PostToolUse || python scripts/antigravity_hook.py --event PostToolUse || py -3 scripts/antigravity_hook.py --event PostToolUse",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python3 scripts/antigravity_hook.py --event Stop || python scripts/antigravity_hook.py --event Stop || py -3 scripts/antigravity_hook.py --event Stop",
+        "timeout": 15
+      }
+    ]
+  }
+}

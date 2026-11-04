@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "savetoken"
+version = "0.1.0"
+description = "Cross-Platform Token & Cost Control Engine for Google Antigravity & Agentic Coding Assistants (macOS & Windows)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Le Cong" },
+    { name = "Microsoft Research & UC Berkeley (Original TokenEconomizer Authors)" }
+]
+keywords = ["antigravity", "token-economizer", "llm-agents", "cost-optimization", "google-antigravity", "token-savings"]
+dependencies = []
+
+[project.scripts]
+te = "tokeneconomizer.plugin.cli:main"
+savetoken = "tokeneconomizer.plugin.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["tokeneconomizer*"]
+exclude = ["experiments*", "te_harness*", "tests*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.package-data]
+tokeneconomizer = ["trace/*.json"]

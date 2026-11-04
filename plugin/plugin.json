@@ -1,0 +1,22 @@
+{
+  "name": "tokeneconomizer",
+  "displayName": "SaveToken (TokenEconomizer)",
+  "version": "0.1.0",
+  "description": "Cross-platform token & cost optimization engine for Google Antigravity & Agentic Coding Assistants (Microsoft Research & UC Berkeley): continuous repository micro-skills learning, automated unused tool pruning, failure-loop guard, and cache-aware token accounting.",
+  "author": {
+    "name": "SaveToken Contributors (Original Research by Microsoft Research & UC Berkeley)",
+    "url": "https://github.com/lecong91/SaveToken"
+  },
+  "homepage": "https://github.com/lecong91/SaveToken",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lecong91/SaveToken.git"
+  },
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Show SaveToken status and token savings for this repository",
+    "List learned repository micro-skills and candidate facts",
+    "Inspect unused tool pruning proposals for this workspace",
+    "Run SaveToken health check (doctor)"
+  ]
+}
